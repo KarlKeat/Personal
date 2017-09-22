@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Karl Keat</title>
+        <script type="text/javascript" src="contact.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Questrial|Dosis" rel="stylesheet">        
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
@@ -24,17 +25,17 @@
         </div>
         <div id="ContactForm" >
             <p>Get in touch! (All fields are required.)</p>
-            <form>
+            <form onsubmit="submitForm()">
                 <label>Name:<br>
-                    <input required type="text" name="name"></input>
+                    <input required type="text" id="name"></input>
                 </label>
                 <br><br>
                 <label>Email:<br>
-                    <input required type="email" name="email"></input>
+                    <input required type="email" id="email"></input>
                 </label>
                 <br><br>
                 <label>Purpose:<br>
-                    <select required>
+                    <select required id="purpose">
                         <option value=""></option>
                         <option value="business">Business Inquiry</option>
                         <option value="recruiting">Recruiting</option>
@@ -43,9 +44,9 @@
                     </select>
                 </label>
                 <br><br>
-                <textarea required name="message" cols="50" rows="10"></textarea>
+                <textarea required id="message" cols="50" rows="10"></textarea>
                 <br><br>
-                <input type="submit" name="submit" value="Submit"></input>
+                <input type="submit" id="submit" value="Submit" ></input>
             </form>
         </div>
     </body>
